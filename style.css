@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+   
+}
+
+body{
+    background-color: rgb(181, 228, 247);
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: solid skyblue;
+    border-radius: 10px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar-brand{
+    align-items: center;
+    text-align: center;
+    -webkit-text-stroke: skyblue;
+    -webkit-text-stroke-width: 2px;
+    font-size: 5rem;
+}
+
+.lead{
+    color: skyblue;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: solid skyblue;
+    width: 20%;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.search-title{
+    padding-left: 10px;
+}
+
+.search-container{
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.search-bar{
+    padding: 5px;
+    width: 70%;
+}
+
+.search-button{
+    width: 10%;
+}
+
+
+
