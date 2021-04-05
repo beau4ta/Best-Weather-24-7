@@ -17,16 +17,44 @@
         <p class="lead">For all your weather needs wherever you may be!</p>
       </nav>
     </div>
-
+    <main class="main-container">
     <aside class="sidebar">
         <h3 class="search-title">Search for a city:</h3>
       <form class="search-container">
         <input class="search-bar" type="text" placeholder="Search.." name="search">
         <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
       </form>
+
+    <div class="list-container"> 
+      <ul class="list-group">
+      </ul>
+    </div>   
     </aside>
 
+    <div class="search-results">
+        <div class="uv-container"></div>
+        <div class="forcast-container">
+        </div>
+    </div>
+    </main>
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Error!</h5>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
