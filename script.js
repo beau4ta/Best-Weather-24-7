@@ -1,5 +1,6 @@
 //Weather Dashboard - Beau Fortier
 
+//global variables
 var weatherResults = $(".search-results");
 var searchBtn = $(".search-button");
 var clearBtn = $(".clear-button");
@@ -11,11 +12,13 @@ var uvContainer = $(".uv-container")
 var apiKey = "5769cc15ba5066b6f08d6542ae0e3f75"
 var cities = JSON.parse(localStorage.getItem("cities")) || [];
 
+//show search history on refresh
 function init() {
     showSearch();
 }
 init();
 
+//function to prevent duplicate searches from saving to local storage
 function findCity(city) {
     for (var i = 0; i < cities.length; i++) {
         if (city === cities[i]){
@@ -35,6 +38,7 @@ function inputSearch(event) {
     cities.push(searchBar)
     }
 
+    //
     if (searchBar) {
         saveSearch();
         showSearch();
@@ -149,13 +153,13 @@ function displayForcast(results) {
 
     forcastCard.append(cardTitle, cardInfo, cardInfo2, cardInfo3);
 
-    var icon = results.list[8].weather[0].icon
+    var icon = results.list[((i+1)*8)-1].weather[0].icon
     var date = new Date((results.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();  
 
     cardTitle.textContent = date;
     cardInfo.src = 'https://openweathermap.org/img/wn/' + icon + "@2x.png";
-    cardInfo2.textContent = "Temp: " + results.list[8].main.temp + " °F";
-    cardInfo3.textContent = "Humidity: " + results.list[8].main.humidity + " %"
+    cardInfo2.textContent = "Temp: " + results.list[((i+1)*8)-1].main.temp + " °F";
+    cardInfo3.textContent = "Humidity: " + results.list[((i+1)*8)-1].main.humidity + " %"
 
     forcastContainer.append(forcastCard)
     }
