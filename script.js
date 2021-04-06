@@ -187,13 +187,13 @@ function displayUV(index) {
     if (index.current.uvi < 3) {
         uvInfo.setAttribute("class", "lowUV")
     }
-    if (index.current.uvi <= 5 && index.current.uvi >= 3) {
+    if (index.current.uvi < 6 && index.current.uvi >= 3) {
         uvInfo.setAttribute("class", "moderateUV")
     }
-    if (index.current.uvi <= 7 && index.current.uvi >= 6) {
+    if (index.current.uvi < 8 && index.current.uvi >= 6) {
         uvInfo.setAttribute("class", "highUV")
     }
-    if (index.current.uvi <= 10 && index.current.uvi >= 8) {
+    if (index.current.uvi < 11 && index.current.uvi >= 8) {
         uvInfo.setAttribute("class", "veryhighUV")
     }
     if (index.current.uvi >= 11) {
